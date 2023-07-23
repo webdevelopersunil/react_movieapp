@@ -15,9 +15,18 @@ class MovieCard extends Component{
 
     addStars = () => {
 
-        this.setState({
-            stars: this.state.stars += .5
+        // First form of set state
+        // this.setState({
+        //     stars: this.state.stars += .5
+        // });
+
+        // Second form of set state
+        this.setState((prevState) => {
+            return{
+                stars: prevState.stars+.5
+            }
         });
+
         // this.state.stars += .5;
         // console.log("this: ", this.state.stars);
     }
