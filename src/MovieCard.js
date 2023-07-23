@@ -1,7 +1,21 @@
 import {Component} from "react";
 
 class MovieCard extends Component{
+
+    constructor(){
+        super();
+        this.state = {
+            title : "The Avengers",
+            plot :  "Super naturalpower shown in this movie",
+            price : 199,
+            rating : 8.9
+        }
+    }
+
     render(){
+
+        const { title, plot, price, rating } = this.state;
+
         return (
             <div className="main" >
                 <div className="movie-card" >
@@ -11,13 +25,17 @@ class MovieCard extends Component{
                     </div>
 
                     <div className="right" >
-                        <div className="title" > The Avengers </div>
-                        <div className="plo" > Super naturalpower shown in this movie </div>
-                        <div className="price" > Rs. 199 </div>
+                        <div className="title" > {this.state.title} </div>
+                        <div className="plo" > {plot} </div>
+                        <div className="price" > Rs. {price} </div>
 
                         <div className="footer" >
-                            <div className="rating" >8.9</div>
-                            <div className="stars" >star</div>
+                            <div className="rating" > {rating} </div>
+                            <div className="star-dis" >
+                                <img className="str-btn" alt="decrease" src="https://cdn-icons-png.flaticon.com/128/2801/2801932.png" />
+                                <img alt="star" src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png" className="stars" />
+                                <img className="str-btn" alt="increase" src="https://cdn-icons-png.flaticon.com/128/2801/2801932.png" />
+                            </div>
                             <button className="favourite-btn" >Favourite</button>
                             <button className="cart-btn" >Add to Cart</button>
                         </div>

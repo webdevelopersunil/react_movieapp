@@ -1,5 +1,5 @@
 import MovieCard from "./MovieCard.js";
-import css from "./index.css";
+import "./index.css";
 
 
 function App() {
@@ -7,7 +7,6 @@ function App() {
     <>
       <h1>Movie App</h1>
       <MovieCard />
-       
     </>
   );
 }
