@@ -8,17 +8,23 @@ class MovieCard extends Component{
             title : "The Avengers",
             plot :  "Super naturalpower shown in this movie",
             price : 199,
-            rating : 8.9
+            rating : 8.9,
+            stars : 0
         }
     }
 
     addStars = () => {
-        console.log("this: ", this);
+
+        this.setState({
+            stars: this.state.stars += .5
+        });
+        // this.state.stars += .5;
+        // console.log("this: ", this.state.stars);
     }
 
     render(){
 
-        const { title, plot, price, rating } = this.state;
+        const { title, plot, price, rating, stars } = this.state;
 
         return (
             <div className="main" >
@@ -39,6 +45,7 @@ class MovieCard extends Component{
                                 <img className="str-btn" alt="decrease" src="https://cdn-icons-png.flaticon.com/128/2801/2801932.png" />
                                 <img alt="star" src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png" className="stars" />
                                 <img onClick={this.addStars} className="str-btn" alt="increase" src="https://cdn-icons-png.flaticon.com/128/3524/3524388.png" />
+                                <span className="starCount" >{stars}</span>
                             </div>
                             <button className="favourite-btn" >Favourite</button>
                             <button className="cart-btn" >Add to Cart</button>
