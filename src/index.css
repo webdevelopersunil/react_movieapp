@@ -131,6 +131,12 @@ footer.starCount {
       margin: 5px;
     
 }
+
+.uncart-btn{
+  background-color: red;
+  color: #fff;
+  margin: 5px;
+}
 .unfavourite-btn {
   background-color: #db2828;
   color: #fff;
