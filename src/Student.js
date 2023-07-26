@@ -6,11 +6,11 @@ class Student extends Component{
 
         // const { title, plot, price, rating, stars, fav, cart } = this.state;
         console.log(this.props);
-
+        const {name, sname} = this.props;
         return (
             <>
-            <h1>Hello, {this.props.name}</h1>
-            <p>You are a {this.props.sname}</p>
+            <h1>Hello, {name}</h1>
+            <p>You are a {sname}</p>
             </>
         )
     }
