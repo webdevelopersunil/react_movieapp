@@ -143,3 +143,31 @@ footer.starCount {
   text-shadow: none;
   margin: 5px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS for List Links */
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.listItem div {
+  padding: 4px;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+img {
+  height: 25px;
+  padding: 0px 6px;
+}
